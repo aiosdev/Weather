@@ -18,15 +18,18 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/bt1"/>
+        android:id="@+id/bt1"
+        android:text="按城市名字显示天气"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/bt2"/>
+        android:id="@+id/bt2"
+        android:text="按城市代码显示天气"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/bt3"/>
+        android:id="@+id/bt3"
+        android:text="按城市经纬度显示天气"/>
 </RelativeLayout>
