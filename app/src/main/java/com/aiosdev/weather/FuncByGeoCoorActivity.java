@@ -1,11 +1,21 @@
 package com.aiosdev.weather;
 
+import android.content.Context;
+import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.aiosdev.weather.model.City;
 import com.aiosdev.weather.tools.GsonUtilForTony;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 
 public class FuncByGeoCoorActivity extends AppCompatActivity {
@@ -68,8 +78,34 @@ public class FuncByGeoCoorActivity extends AppCompatActivity {
             System.out.println(city);
         }
 
+        JSONArray jsonArray = getJsonFromAssets(getApplicationContext(), "citylist.json");
+        System.out.println("jsonArray" + jsonArray.length());
 
 
 
+    }
+
+    public static JSONArray getJsonFromAssets(Context mContext, String fileName){
+
+        StringBuilder sb = new StringBuilder();
+        AssetManager am = mContext.getAssets();
+        JSONArray jsonObject = null;
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(
+                    am.open(fileName)));
+            String next = "";
+            while (null != (next = br.readLine())) {
+                sb.append(next);
+            }
+
+            jsonObject = new JSONArray(sb.toString().trim());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            sb.delete(0, sb.length());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return jsonObject;
     }
 }
