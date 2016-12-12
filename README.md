@@ -22,3 +22,6 @@ Open Weather Map API</a> inline link.</p>
 * function for info with city name by Hunter
 * function for info with city id by Xinyuan
 * function for info with city geographical coordinates by Tony
+
+##City list display
+* 北京，上海，广州，蒙特利尔，渥太华，多伦多，温哥华，纽约，华盛顿，莫斯科，巴黎，伦敦
