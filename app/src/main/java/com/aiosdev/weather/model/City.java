@@ -1,14 +1,14 @@
 package com.aiosdev.weather.model;
 
 /**
- * Created by Administrator on 2016/12/11 0011.
+ * 城市信息类
  */
 
 public class City {
-    private String _id;
-    private String name;
-    private String country;
-    private Coord coord;
+    private String _id;    //城市代码
+    private String name;   //城市名字
+    private String country; // 国家
+    private Coord coord;   //地理坐标类
 
     public class Coord {
         private double lon;

@@ -1,7 +1,8 @@
 package com.aiosdev.weather.model;
 
 /**
- * Created by Administrator on 2016/12/11 0011.
+ * 城市天气信息显示类
+ * 包括4个子类
  */
 
 public class WeatherInfo {
