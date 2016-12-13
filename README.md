@@ -9,8 +9,8 @@ Open Weather Map API</a> inline link.</p>
 
 ##Tecnology
 * development tool: Android Studio
-* JSON parsing: GSON
-* network frame: volley
+* JSON parsing: GSON, JSONObject and JSONArray
+* network frame: okHttp, Message - Handler mode
 * picture download: picasso
 
 ##Work team
