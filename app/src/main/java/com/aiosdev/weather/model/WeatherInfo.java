@@ -1,21 +1,24 @@
 package com.aiosdev.weather.model;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * 城市天气信息显示类
  * 包括4个子类
  */
 
-public class WeatherInfo {
-    private Weather mWeather;
+public class WeatherInfo implements Serializable {
+    private List<Weather> mWeather;
     private Main mMain;
     private Wind mWind;
     private Clouds mClouds;
 
-    public Weather getWeather() {
+    public List<Weather> getWeather() {
         return mWeather;
     }
 
-    public void setWeather(Weather weather) {
+    public void setWeather(List<Weather> weather) {
         mWeather = weather;
     }
 
