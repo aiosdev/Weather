@@ -46,7 +46,6 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -300,7 +299,9 @@ public class FuncByGeoCoorActivity extends AppCompatActivity {
             JSONObject jsonWind = object.getJSONObject("wind");
             Wind wind = new Wind();
             wind.setSpeed(jsonWind.getString("speed"));
-            wind.setDeg(jsonWind.getString("deg"));
+            if(!jsonWind.isNull("deg")) {
+                wind.setDeg(jsonWind.getString("deg"));
+            }
             weatherInfo.setWind(wind);
 
             JSONObject jsonClouds = object.getJSONObject("clouds");
