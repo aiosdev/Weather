@@ -77,6 +77,8 @@ public class FuncByGeoCoorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_func_by_geo_coor);
 
+        System.out.println("==============this is a onCreate methode !");
+
         JSONArray jsonArray = getJsonFromAssets(getApplicationContext(), "citylist.json");
         //System.out.println("jsonArray" + jsonArray.length());
         cityList = GsonUtilForTony.parseJsonWitGson(jsonArray.toString());
@@ -314,5 +316,41 @@ public class FuncByGeoCoorActivity extends AppCompatActivity {
         }
 
         return weatherInfo;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        System.out.println("==============this is a onStart methode !");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        System.out.println("==============this is a onResume methode !");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println("==============this is a onPause methode !");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        System.out.println("==============this is a onStop methode !");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("==============this is a onDestroy methode !");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        System.out.println("==============this is a onRestart methode !");
     }
 }
